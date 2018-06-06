@@ -100,16 +100,16 @@ function touching() {
       blueBtn = false
    }
 }
-
-
-
-
-
-
-
-
-
-
+//line 103
+function untouch() {
+  if (blueBtn == true) {
+    elapsed = thisTouch
+    dotdash()
+    //myTest = elapsed
+    thisTouch = 0
+    //Msg.change(myTest + ":" + elapsed)
+  }
+}
 //line 113
 function dotdash(){
   if (elapsed<6) {
