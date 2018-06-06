@@ -83,3 +83,59 @@ function code2letter (code) {
   return lt[x]
 }
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//line 135
+function word() {
+  val = "□"
+  send(val)
+  MyMsg = MyMsg + val
+  Msg.change(MyMsg)
+}
