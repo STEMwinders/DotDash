@@ -19,3 +19,67 @@ function get(cdltr) {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//line 76
+function code2letter (code) {
+  for (x=0;x<32;x++) {
+    if (code == mc[x]) {
+      break
+    }
+  }
+  return lt[x]
+}
+ 
