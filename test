@@ -139,3 +139,12 @@ function word() {
   MyMsg = MyMsg + val
   Msg.change(MyMsg)
 }
+//line 142
+function clear() {
+  MyMsg = ""
+  Msg.change(MyMsg)
+  send("x")
+}
+letterBtn.tap = letter
+wordBtn.tap = word
+clearBtn.tap = clear
