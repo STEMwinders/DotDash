@@ -91,15 +91,15 @@ function letter2code(letter) {
   }
   return mc[x]
 } 
-
-
-
-
-
-
-
-
-
+//line 94
+function touching() {
+  if (x<270 && x>130 && y>600 && y<730) {
+      thisTouch++
+      blueBtn = true
+   } else {
+      blueBtn = false
+   }
+}
 
 
 
