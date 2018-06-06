@@ -1,0 +1,21 @@
+//line 1
+blueBtn = false
+function get(cdltr) {
+  //alert(cdltr)
+  if (cdltr=="x") {
+    RxCd.change("cleared")
+    RcvMsg = ""
+    Rx.change(RcvMsg)
+  } else {
+    if (cdltr=="□") {
+      RxCd.change(cdltr)
+      RcvMsg = RcvMsg + cdltr
+      Rx.change(RcvMsg)
+    } else {
+      ltr = code2letter(cdltr)
+      RxCd.change(cdltr)
+      RcvMsg = RcvMsg + ltr
+      Rx.change(RcvMsg)
+    }
+  }
+}
