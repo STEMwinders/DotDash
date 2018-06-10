@@ -2,22 +2,22 @@
 blueBtn = false
 function get(cdltr) {
   //alert(cdlr)
-if (cdltr=="x") {
-  RxCd.change("cleared")
-  RcvMsg = ""
-  Rx.change(RcvMsg)
-} else {
-  if (cdltr=="□") {
-    RxCd.change(cdltr)
-    RcvMsg = RcvMsg + cdltr
+  if (cdltr=="x") {
+    RxCd.change("cleared")
+    RcvMsg = ""
     Rx.change(RcvMsg)
   } else {
-    ltr = code2letter(cdltr)
-    RxCd.change(cdltr)
-    RcvMsg = RcvMsg + ltr
-    Rx.change(RcvMsg)
+    if (cdltr=="□") {
+      RxCd.change(cdltr)
+      RcvMsg = RcvMsg + cdltr
+      Rx.change(RcvMsg)
+    } else {
+      ltr = code2letter(cdltr)
+      RxCd.change(cdltr)
+      RcvMsg = RcvMsg + ltr
+      Rx.change(RcvMsg)
+    }
   }
-}
 }
 //line 22
 line (10)
