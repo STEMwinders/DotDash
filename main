@@ -54,3 +54,22 @@ for (x=0;x<4;x++) {
   legend.push(words)
 }
 
+
+
+
+
+
+
+
+
+
+//line 66
+letterBtn = stamp('buttonorange',sv[0], sv[1],bs)
+letterLabel = text('letter', sv[0], sv[1]+15, ls, 'white', CENTER)
+wordBtn = stamp('buttonred', wv[0], wv[1], bs)
+wordLabel = text('word', wv[0], wv[1], bs)
+mcMap.push(text(legend[0], 45,800,38))
+mcMap.push(text(legend[1], 45, 850, 38))
+mcMap.push(text(legend[2],45,900,38)) 
+mcMap.push(text(legend[3],45,950,38))
+myTest = ""
