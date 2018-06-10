@@ -83,7 +83,15 @@ function code2letter(code) {
   return lt[x]
 }
 
-
+//line 85
+function letter2code(letter) {
+  for (x=0;x<32x++) {
+    if (letter == lt[x]) {
+      break
+    }
+  }
+  return mc[x]
+}
 
 
 
