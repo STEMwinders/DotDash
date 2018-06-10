@@ -73,15 +73,15 @@ mcMap.push(text(legend[1], 45, 850, 38))
 mcMap.push(text(legend[2],45,900,38)) 
 mcMap.push(text(legend[3],45,950,38))
 myTest = ""
-
-
-
-
-
-
-
-
-
+//line 76 
+function code2letter(code) {
+  for (x=0;x<32;x++) {   
+    if (code == mc[x]) {
+    break
+    }
+  }
+  return lt[x]
+}
 
 
 
