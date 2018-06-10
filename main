@@ -119,19 +119,19 @@ myTest = ""
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//line 122
+function letter() {
+	val = code2letter(CodeLtr)
+	if (val == undefined) {
+		sound('beeps')
+	} else {
+		send(CodeLtr)
+		MyMsg = MyMsg + val
+		Msg.change(MyMsg)
+	}
+	CodeLtr = "" 
+	Cod.change(CodeLtr)
+}
 
 
 
