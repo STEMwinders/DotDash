@@ -1,1 +1,56 @@
 //line 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//line 48
+for (x=0;x<4;x++) {
+  words = ""
+  for (y=0;y<8;y++) {
+    words = words + lt[y+(8*x)] + sp + mc[y+(8*x)] + sp
+  }
+  legend.push(words)
+}
+
