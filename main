@@ -29,22 +29,22 @@ sv = [480, 665] //letter button position
 wv = [635,665] //word button position
 bs = 150 //button size
 ls = 35 //label size
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//line 32
+lt = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","?",".",",","!","\"",""]
+mc = ["•-","-•••","-•-•","-••","•","••-•","--•","••••","••","•---","-•-","•-••","--","-•","---","•--•","--•-","•-•","•••","-","••-","•••-","•--","-••-","-•--","--••","••--••","•-•-•-","--••--","-•-•--","•-••-•",""]
+sp = " "     
+words = ""	
+legend = []
+RcvMsg = ""
+RcvCd = ""
+MyMsg = ""
+MyCod = ""
+CodeLtr = ""
+MyWord = ""
+mcMap = []
+dirTxt = "Tap/Press •/- ,letter to send, word for space."
+thisTouch = 0
+elasped = 0
 //line 48
 for (x=0;x<4;x++) {
   words = ""
