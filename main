@@ -1,24 +1,24 @@
 //line 1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+blueBtn = false
+function get(cdltr) {
+  //alert(cdlr)
+if (cdltr=="x") {
+  RxCd.change("cleared")
+  RcvMsg = ""
+  Rx.change(RcvMsg)
+} else {
+  if (cdltr=="□") {
+    RxCd.change(cdltr)
+    RcvMsg = RcvMsg + cdltr
+    Rx.change(RcvMsg)
+  } else {
+    ltr = code2letter(cdltr)
+    RxCd.change(cdltr)
+    RcvMsg = RcvMsg + ltr
+    Rx.change(RcvMsg)
+  }
+}
+}
 //line 22
 line (10)
 RxFrame = box(0,0,766,250'white','blue')
