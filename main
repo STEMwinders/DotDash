@@ -22,6 +22,16 @@ function get(cdltr) {
 //line 22
 line (10)
 RxFrame = box(0,0,766,250'white','blue')
+//line 56
+RxCd = text(RcvCd, 30, 50)
+Rx = text(RcvMsg, 30, 100)
+Cod = text(MyCod, 30, 300)
+Msg = text(MyMsg, 30, 345)
+clearBtn = stamp('handbroom', 700, 425, 100)
+text("clear", 670, 485, 30)
+Directions = text(dirTxt, 30, 565, 30)
+dotBtn = stamp('buttonblue', dd[0], dd[1], bs)
+dotLabel = text('•/-', dd[0], dd[1]+15, ls, 'white', CENTER)
 line(10)
 RxFrame = box(0,260,766,250,'white','green')
 dd = [200, 665] //dot/dash button position
@@ -53,16 +63,6 @@ for (x=0;x<4;x++) {
   }
   legend.push(words)
 }
-
-
-
-
-
-
-
-
-
-
 //line 66
 letterBtn = stamp('buttonorange',sv[0], sv[1],bs)
 letterLabel = text('letter', sv[0], sv[1]+15, ls, 'white', CENTER)
