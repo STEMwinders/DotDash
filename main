@@ -1,7 +1,7 @@
 //line 1
 blueBtn = false
 function get(cdltr) {
-  //alert(cdlr)
+  //alert(cdltr)
   if (cdltr=="x") {
     RxCd.change("cleared")
     RcvMsg = ""
@@ -20,30 +20,20 @@ function get(cdltr) {
   }
 }
 //line 22
-line (10)
-RxFrame = box(0,0,766,250'white','blue')
-//line 56
-RxCd = text(RcvCd, 30, 50)
-Rx = text(RcvMsg, 30, 100)
-Cod = text(MyCod, 30, 300)
-Msg = text(MyMsg, 30, 345)
-clearBtn = stamp('handbroom', 700, 425, 100)
-text("clear", 670, 485, 30)
-Directions = text(dirTxt, 30, 565, 30)
-dotBtn = stamp('buttonblue', dd[0], dd[1], bs)
-dotLabel = text('•/-', dd[0], dd[1]+15, ls, 'white', CENTER)
+line(10)
+RxFrame = box(0,0,766,250,'white','blue')
 line(10)
 RxFrame = box(0,260,766,250,'white','green')
 dd = [200, 665] //dot/dash button position
-sv = [480, 665] //letter button position
-wv = [635,665] //word button position
+sv = [480, 655] //letter button position
+wv = [635, 665] //word button position
 bs = 150 //button size
-ls = 35 //label size
+ls = 35 // label size
 //line 32
 lt = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","?",".",",","!","\"",""]
 mc = ["•-","-•••","-•-•","-••","•","••-•","--•","••••","••","•---","-•-","•-••","--","-•","---","•--•","--•-","•-•","•••","-","••-","•••-","•--","-••-","-•--","--••","••--••","•-•-•-","--••--","-•-•--","•-••-•",""]
-sp = " "     
-words = ""	
+sp = " "
+words = ""
 legend = []
 RcvMsg = ""
 RcvCd = ""
@@ -52,7 +42,7 @@ MyCod = ""
 CodeLtr = ""
 MyWord = ""
 mcMap = []
-dirTxt = "Tap/Press •/- ,letter to send, word for space."
+dirTxt = "Tap/Press •/- , letter to send, word for space."
 thisTouch = 0
 elasped = 0
 //line 48
@@ -63,80 +53,90 @@ for (x=0;x<4;x++) {
   }
   legend.push(words)
 }
+//line 56
+RxCd = text(RcvCd, 30, 50)
+Rx = text(RcvMsg, 30, 100)
+Cod = text(MyCod, 30, 300)
+Msg = text(MyMsg, 30, 345)
+clearBtn = stamp('handbroom', 700, 425, 100)
+text("clear", 670, 485, 30)
+Directions = text(dirTxt, 30, 565, 30)
+dotBtn = stamp('buttonblue', dd[0], dd[1], bs)
+dotLabel = text('•/-', dd[0], dd[1]+15, ls, 'white', CENTER)
 //line 66
-letterBtn = stamp('buttonorange',sv[0], sv[1],bs)
+letterBtn = stamp('buttonorange', sv[0], sv[1], bs)
 letterLabel = text('letter', sv[0], sv[1]+15, ls, 'white', CENTER)
 wordBtn = stamp('buttonred', wv[0], wv[1], bs)
-wordLabel = text('word', wv[0], wv[1], bs)
-mcMap.push(text(legend[0], 45,800,38))
+wordLabel = text('word', wv[0], wv[1]+15, ls, 'white', CENTER)
+mcMap.push(text(legend[0], 45, 800, 38))
 mcMap.push(text(legend[1], 45, 850, 38))
-mcMap.push(text(legend[2],45,900,38)) 
-mcMap.push(text(legend[3],45,950,38))
+mcMap.push(text(legend[2], 45, 900, 38))
+mcMap.push(text(legend[3], 45, 950, 38))
 myTest = ""
-//line 76 
-function code2letter(code) {
-  for (x=0;x<32;x++) {   
+//line 76
+function code2letter (code) {
+  for (x=0;x<32;x++) {
     if (code == mc[x]) {
-    break
+      break
     }
   }
   return lt[x]
 }
 //line 85
 function letter2code(letter) {
-  for (x=0;x<32x++) {
+  for (x=0;x<32;x++) {
     if (letter == lt[x]) {
       break
     }
   }
   return mc[x]
-}
+} 
 //line 94
-function  touching9() {
+function touching() {
   if (x<270 && x>130 && y>600 && y<730) {
-    thisTouch++
-    blueBtn = true
-  } else {
-    blueBtn = false
-  }
+      thisTouch++
+      blueBtn = true
+   } else {
+      blueBtn = false
+   }
 }
 //line 103
 function untouch() {
   if (blueBtn == true) {
     elapsed = thisTouch
     dotdash()
-    //myTest = elasped
+    //myTest = elapsed
     thisTouch = 0
-    //Msg.change(myTest + ":" + elasped)
+    //Msg.change(myTest + ":" + elapsed)
   }
 }
 //line 113
 function dotdash(){
-if (elapsed<6) {
-CodeLtr = CodeLtr + "•"
-} else {
-CodeLtr= CodeLtr + "-"
+  if (elapsed<6) {
+    CodeLtr = CodeLtr + "•"
+  } else {
+    CodeLtr = CodeLtr + "-"
+  }
+  Cod.change(CodeLtr)
 }
-Cod.change(CodeLtr)
-}
-//line 122
-function letter() {
-	val = code2letter(CodeLtr)
-	if (val == undefined) {
-		sound('beeps')
-	} else {
-		send(CodeLtr)
-		MyMsg = MyMsg + val
-		Msg.change(MyMsg)
-	}
-	CodeLtr = "" 
-	Cod.change(CodeLtr)
+//line 122	
+function letter(){
+  val = code2letter(CodeLtr)
+  if (val == undefined) {
+    sound('beeps')
+  } else {
+    send(CodeLtr)
+    MyMsg = MyMsg + val
+    Msg.change(MyMsg)
+  }
+  CodeLtr = ""
+  Cod.change(CodeLtr)
 }
 //line 135
 function word() {
-val="□"
+  val = "□"
   send(val)
- MyMsg = MyMsg + val
+  MyMsg = MyMsg + val
   Msg.change(MyMsg)
 }
 //line 142
@@ -148,3 +148,5 @@ function clear() {
 letterBtn.tap = letter
 wordBtn.tap = word
 clearBtn.tap = clear
+
+
