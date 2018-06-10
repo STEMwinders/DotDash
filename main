@@ -132,13 +132,13 @@ function letter() {
 	CodeLtr = "" 
 	Cod.change(CodeLtr)
 }
-
-
-
-
-
-
-
+//line 135
+function word() {
+val="□"
+  send(val)
+ MyMsg = MyMsg + val
+  Msg.change(MyMsg)
+}
 //line 142
 function clear() {
   MyMsg = ""
